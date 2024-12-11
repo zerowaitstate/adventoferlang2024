@@ -52,4 +52,6 @@ part2() ->
     Input = puzzle_input(),
     {L1, L2} = lists:unzip(Input),
     lists:foreach(fun(E) -> ets:update_counter(FreqT, E, 1, {0, 0}) end, L2),
-    lists:sum(lists:map(fun(E) -> get_freq_product(FreqT, E) end, L1)).
+    Total = lists:sum(lists:map(fun(E) -> get_freq_product(FreqT, E) end, L1)),
+    ets:delete(FreqT),
+    Total.
