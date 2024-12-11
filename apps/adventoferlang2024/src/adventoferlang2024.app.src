@@ -1,5 +1,5 @@
 {application, adventoferlang2024, [
-    {description, "An OTP application"},
+    {description, "Advent of Code 2024 - But Weird"},
     {vsn, "0.1.0"},
     {registered, []},
     {mod, {adventoferlang2024_app, []}},
@@ -8,7 +8,11 @@
         stdlib
     ]},
     {env, []},
-    {modules, [day1, day3]},
+    {modules, [
+        day1,
+        day3,
+        day4
+    ]},
     {licenses, ["Apache-2.0"]},
     {links, []}
  ]}.
